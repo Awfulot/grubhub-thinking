@@ -15,7 +15,13 @@
     <p class="text-4xl">Find all Soul food resturants that deliver to you.</p>
     <p class="text-2xl">Who delivers?</p>
     <p>Enter address below</p>
-    <input type="search" placeholder="SEARCH HERE" id="search-field">
+    <div class="dropdown">
+        <input type="search" class="btn m-1" placeholder="SEARCH HERE" id="search-field" tabindex="0">
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52" id="location-list">
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+        </ul>
+    </div>
     <div id="search-popup">Test</div>
 </div>
 
