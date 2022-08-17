@@ -1,5 +1,7 @@
 const searchField = document.getElementById("search-field");
 const searchPopup = document.getElementById("search-popup");
+//let createdList = false;
+
 
 const locationArray = [
     {location:"Boston", zipcode:"02131"},
@@ -7,11 +9,15 @@ const locationArray = [
     {location:"California", zipcode:"95312"},
     {location:"Texas", zipcode:"52902"},
     {location:"New York", zipcode:"29411"},
-]
+];
 const location2 = [
     "Boston",
     "Florida",
-]
+    "Bart",
+    "Bolly",
+    "Fleak",
+    "Fresh"
+];
 
 /*
 function searchClickHandler(){
@@ -26,23 +32,34 @@ searchField.addEventListener("input", function(){
     //arrayDataCheck();
 
 
-})
+});
 
 
 //function searchPopup(){};
 function letterCheck(){
     let userInput = searchField.value;
+    
     //let userLetterArray = [];
+    userInput = userInput.toUpperCase();
+
 
     for(let item of location2){
-        if(item.startsWith(userInput)){
+        if(item.startsWith(userInput)/* && (!createdList)*/){
             searchPopup.classList.remove("hidden");
-            searchPopup.innerHTML = `${item}`;
+            //searchPopup.innerHTML = `${item}`;
             console.log("MATCH")
+           
+            const paragraphListCreate = document.createElement("p");
+            paragraphListCreate.innerHTML = `<p>${item}</p>`
+            searchPopup.appendChild(paragraphListCreate);
+            //createdList = true;
+            
         }
     }
     if(userInput === ""){
         searchPopup.classList.add("hidden");
+        searchPopup.innerHTML = "";
+        //createdList = false;
     }
 };
 
