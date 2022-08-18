@@ -14,6 +14,10 @@ const locationArray = [
     "Albuquerque",
     "Atlanta",
     "Arlington",
+    "Chicago",
+    "Columbus",
+    "Charlotte",
+    "Colorado Springs",
 ];
 
 /*
@@ -48,14 +52,17 @@ function letterCheck(){
         //there are 4 things that can pop up when the user types one letter, but 3 things that can pop up if the user types a 
         //different letter. There probably is a way to make that 3 value into a variable that changes based on the content
         //that is suppose to pop up. The loop counter variable needed to be there to stop the for loop from repeating content
-        //that was already shown when the user types something in the search bar.
+        //that was already shown when the user types something in the search bar. 
+        // const startsWithA = locationArray.filter((locations) => locations.startsWith("A")); <--- This could work, it would display
+        // the places that start with the letter A, than I could get the amount of items in that array and send it to a 
+        //variable that would replace the number 4 below.
         if(item.startsWith(userInput) && loopCounter !== 4){
             searchPopup.classList.remove("hidden");
             //searchPopup.innerHTML = `${item}`;
-            console.log("MATCH")
+            //console.log("MATCH")
            
             const paragraphListCreate = document.createElement("p");
-            paragraphListCreate.innerHTML = `<p>${item}</p>`
+            paragraphListCreate.innerHTML = `<p class="cursor-pointer hover:text-sky-700">${item}</p>`
             searchPopup.appendChild(paragraphListCreate);
             loopCounter++;
             //createdList = true;
