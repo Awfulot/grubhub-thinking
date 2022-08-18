@@ -11,29 +11,13 @@
 <body>
 
 <h1 class="text-orange-500 text-2xl">GRUBHUB</h1>
-<div class="flex flex-col w-screen bg-blue-200 justify-center items-center space-y-5 p-6 h-96">
-    <p class="text-4xl">Find all Soul food resturants that deliver to you.</p>
-    <p class="text-2xl">Who delivers?</p>
-    <p>Enter address below</p>
-    
-    <input type="search" id="search-field" placeholder="SEARCH HERE" class="capitalize">
-    
-    <!--
-    <div class="dropdown">
-        <input type="search" class="btn m-1" placeholder="SEARCH HERE" id="search-field" tabindex="0">
-        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-            <div id="search-popup">
-                <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
-            </div>
-        </ul>
-    </div>
-    -->
-    
-    
-    <div id="search-popup"class="">
-        
-
+<div class="flex flex-col w-screen bg-blue-200 justify-center items-center p-6 h-96">
+    <p class="text-4xl mt-3">Find all Soul food resturants that deliver to you.</p>
+    <p class="text-2xl mt-3">Who delivers?</p>
+    <p class="mt-3">Enter address below</p>
+    <div>
+        <input type="search" id="search-field" placeholder="SEARCH HERE" class="capitalize mt-3">
+        <div id="search-popup"class="bg-gray-200 p-3 hidden"></div>
     </div>
     
 </div>
